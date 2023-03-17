@@ -1,0 +1,271 @@
+{
+  "id": "c7d1ca5a-c194-45bb-b648-551723bd0415",
+  "version": "2.0",
+  "name": "Assignment 4",
+  "url": "https://www.amazon.ca/",
+  "tests": [{
+    "id": "4e3ced87-21d9-450b-b075-82bedf308ce2",
+    "name": "Product Search Functionality Test",
+    "commands": [{
+      "id": "fec0a8a0-77ce-4253-a612-55cb697e0ae8",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "369ed738-b9a7-4d67-a28e-352407b297b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["css=.a-color-state", "css:finder"],
+        ["xpath=//div[@id='search']/span/div/h1/div/div/div/div/span[3]", "xpath:idRelative"],
+        ["xpath=//div/span[3]", "xpath:position"]
+      ],
+      "value": "textbook"
+    }, {
+      "id": "a7ffd4c3-a440-432d-81da-5c22bb24d1ee",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Go']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cc0cd6e-17e7-4da2-9c11-4ddd0475a571",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-color-state",
+      "targets": [
+        ["css=.a-color-state", "css:finder"],
+        ["xpath=//div[@id='search']/span/div/h1/div/div/div/div/span[3]", "xpath:idRelative"],
+        ["xpath=//div/span[3]", "xpath:position"]
+      ],
+      "value": "\"textbook\""
+    }]
+  }, {
+    "id": "cf4a205e-f4c9-4102-90d7-26f018664e2b",
+    "name": "Adding Product to Wishlist Functionality Test",
+    "commands": [{
+      "id": "5fd3e042-bbe5-4bc4-9153-67664ba61784",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/Philosophy-Software-Design-2nd/dp/173210221X/ref=sr_1_19?crid=3FOCLF1GS83E6&keywords=software+textbook&qid=1679037767&sprefix=%2Caps%2C171&sr=8-19",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ee4da92-defe-480f-8eb4-f109c303a5a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "698x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79e02494-6f8d-4f8e-84f0-a9d3cc26a032",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0ca311a-4a16-467b-a8d7-624682f14409",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-wishlist-button-submit",
+      "targets": [
+        ["id=add-to-wishlist-button-submit", "id"],
+        ["name=submit.add-to-registry.wishlist", "name"],
+        ["css=#add-to-wishlist-button-submit", "css:finder"],
+        ["xpath=//input[@id='add-to-wishlist-button-submit']", "xpath:attributes"],
+        ["xpath=//span[@id='wishListMainButton']/span/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40915ae2-85fd-491f-a7c3-025505703f40",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,269.3333435058594)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddebc963-eb1d-4213-96f2-2db2c0cbc388",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=View your List",
+      "targets": [
+        ["linkText=View your List", "linkText"],
+        ["css=#huc-view-your-list-button .a-button-text", "css:finder"],
+        ["xpath=//a[contains(text(),'View your List')]", "xpath:link"],
+        ["xpath=//span[@id='huc-view-your-list-button']/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.amazon.ca/hz/wishlist/ls/3OBY591W3DPSZ?ref_=wl_dp_view_your_list')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/span/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View your List')]", "xpath:innerText"]
+      ],
+      "value": "View your List"
+    }]
+  }, {
+    "id": "63e28b7b-f626-4bd6-93e4-702365fc9bff",
+    "name": "Adding Product to Shopping Cart Functionality Test - Functional",
+    "commands": [{
+      "id": "add60a08-9f39-4ea4-b298-5bddf583e291",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=sr_1_21?crid=3FOCLF1GS83E6&keywords=software+textbook&qid=1679038287&sprefix=%2Caps%2C171&sr=8-21",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64b3a091-affb-4492-acdd-7a6add5b057a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1295x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8be5b77e-b8bf-48b2-8029-f6cf3c65fc76",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,132.6666717529297)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0605f9d-5f08-406b-8825-101818024050",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-to-cart-button",
+      "targets": [
+        ["id=add-to-cart-button", "id"],
+        ["name=submit.add-to-cart", "name"],
+        ["css=#add-to-cart-button", "css:finder"],
+        ["xpath=//input[@id='add-to-cart-button']", "xpath:attributes"],
+        ["xpath=//span[@id='submit.add-to-cart']/span/input", "xpath:idRelative"],
+        ["xpath=//span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aeef818-c1b6-49a9-93b1-05e530caec94",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5611cf9f-a0d0-49d9-95b3-40c71f82cdb7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-size-medium-plus",
+      "targets": [
+        ["css=.a-size-medium-plus", "css:finder"],
+        ["xpath=//div[@id='NATC_SMART_WAGON_CONF_MSG_SUCCESS']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Added to Cart')]", "xpath:innerText"]
+      ],
+      "value": "Added to Cart"
+    }]
+  }, {
+    "id": "17d9e7ed-5c1b-499b-9137-ead2a4db8530",
+    "name": "Removing Product from Shopping Cart Functionality Test",
+    "commands": [{
+      "id": "d9937f40-5741-4508-84f3-a4b2102ad508",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.ca/gp/cart/view.html?ref_=nav_cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2564ea1-854d-483e-9b64-8799e7148d97",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1124x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb5c2415-301a-4859-8c39-8b523b6097c2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#nav-orders > .nav-line-2",
+      "targets": [
+        ["css=#nav-orders > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'& Orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd053404-fc6f-4c97-9aab-22ee9cdc2bc7",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#nav-orders > .nav-line-2",
+      "targets": [
+        ["css=#nav-orders > .nav-line-2", "css:finder"],
+        ["xpath=//a[@id='nav-orders']/span[2]", "xpath:idRelative"],
+        ["xpath=//a[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'& Orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8834f8d-27c9-46b2-97ce-6867de6bb027",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nav-orders",
+      "targets": [
+        ["id=nav-orders", "id"],
+        ["css=#nav-orders", "css:finder"],
+        ["xpath=//a[@id='nav-orders']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-tools']/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/css/order-history?ref_=nav_orders_first')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28d698eb-5710-4ffb-b122-020161e5f764",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=nav-orders",
+      "targets": [
+        ["id=nav-orders", "id"],
+        ["css=#nav-orders", "css:finder"],
+        ["xpath=//a[@id='nav-orders']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-tools']/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/css/order-history?ref_=nav_orders_first')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a29b21f6-bb37-4ad3-b8e3-dc9ad615e7aa",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit.delete.C7973956c-67e1-4242-beda-643eec59456d",
+      "targets": [
+        ["name=submit.delete.C7973956c-67e1-4242-beda-643eec59456d", "name"],
+        ["css=.a-size-small:nth-child(3) .a-color-link", "css:finder"],
+        ["xpath=//input[@name='submit.delete.C7973956c-67e1-4242-beda-643eec59456d']", "xpath:attributes"],
+        ["xpath=//div[@id='sc-active-C7973956c-67e1-4242-beda-643eec59456d']/div[4]/div/div[3]/div/span[2]/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97bbd90b-de71-4f99-ae23-3294702300e0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-spacing-top-base:nth-child(1)",
+      "targets": [
+        ["css=.a-spacing-top-base:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='sc-active-cart']/div/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Your Amazon Cart is empty.')]", "xpath:innerText"]
+      ],
+      "value": "Your Amazon Cart is empty."
+    }]
+  }],
+  "suites": [{
+    "id": "516591b9-5e45-4a4a-97d5-75a3726ff9e8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4e3ced87-21d9-450b-b075-82bedf308ce2"]
+  }],
+  "urls": ["https://www.amazon.ca/", "https://www.amazon.ca/Philosophy-Software-Design-2nd/dp/173210221X/ref=sr_1_19?crid=3FOCLF1GS83E6&keywords=software+textbook&qid=1679037767&sprefix=%2Caps%2C171&sr=8-19", "https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=sr_1_21?crid=3FOCLF1GS83E6&keywords=software+textbook&qid=1679038287&sprefix=%2Caps%2C171&sr=8-21", "https://www.amazon.ca/hz/wishlist/ls?ref_=nav_ListFlyout_navFlyout_createList_lv_redirect", "https://www.amazon.ca/hz/wishlist/ls?isYourLists=true", "https://www.amazon.ca/customer-preferences/country?ref_=icp_lop_mop_chg&preferencesReturnUrl=/", "https://www.amazon.ca/gp/cart/view.html?ref_=nav_cart", "https://www.amazon.com/"],
+  "plugins": []
+}
